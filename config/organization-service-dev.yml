@@ -1,1 +1,26 @@
+server:
+  port: 8890
+
+spring:
+  application:
+    name: organization-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/whiskerguard_dev?useSSL=false&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    com.whiskerguard.organization: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
